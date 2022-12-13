@@ -3,12 +3,6 @@ from multiprocessing import Pool, cpu_count
 from time import time
 
 
-class MyProcess(Process):
-    def __init__(self, group=None, target=None, name=None, args=(), kwargs=None, *, daemon=None):
-        super().__init__(group=group, target=target, name=name, daemon=daemon)
-        self.args = args
-
-
 def factorize(*args):
     result = []
     for el in args:
